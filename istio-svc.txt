@@ -1,0 +1,10 @@
+NAME                   TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)                                          AGE
+grafana                ClusterIP      10.109.147.82    <none>        3000/TCP                                         2d2h
+istio-ingressgateway   LoadBalancer   10.108.81.1      <pending>     15021:32370/TCP,80:30515/TCP,443:30481/TCP       2d23h
+istiod                 ClusterIP      10.107.84.114    <none>        15010/TCP,15012/TCP,443/TCP,15014/TCP            2d23h
+jaeger-collector       ClusterIP      10.110.4.150     <none>        14268/TCP,14250/TCP,9411/TCP,4317/TCP,4318/TCP   2d2h
+kiali                  ClusterIP      10.111.156.142   <none>        20001/TCP,9090/TCP                               2d2h
+loki-headless          ClusterIP      None             <none>        3100/TCP                                         2d2h
+prometheus             ClusterIP      10.111.34.192    <none>        9090/TCP                                         2d2h
+tracing                ClusterIP      10.110.78.67     <none>        80/TCP,16685/TCP                                 2d2h
+zipkin                 ClusterIP      10.107.110.159   <none>        9411/TCP                                         2d2h
