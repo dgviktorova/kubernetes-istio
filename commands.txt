@@ -1,0 +1,943 @@
+    1  pwd
+    2  sudo apt-get update
+    3  df -h
+    4  hostname -I
+    5  ssh root@192.168.1.102
+    6  ufw allow ssh
+    7  sudo ufw allow ssh
+    8  ssh root@192.168.1.102
+    9  sudo ufw status
+   10  sudo apt install openssh-server
+   11  ssh root@192.168.1.102
+   12  sudo adduser didka
+   13  usermod -aG sudo didka
+   14  sudo usermod -aG sudo didka
+   15  ufw app list
+   16  sudo ufw app list
+   17  sudo ufw allow OpenSSH
+   18  sudo ufw enable
+   19  sudo ufw status
+   20  sudo apt update
+   21  sudo apt install apt-transport-https ca-certificates curl software-properties-common
+   22  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+   23  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   24  sudo apt update
+   25  apt-cache policy docker-ce
+   26  sudo apt install docker-ce
+   27  sudo systemctl status docker
+   28  sudo usermod -aG docker ${USER}
+   29  su - ${USER}
+   30  groups
+   31  docker
+   32  docker run hello-world
+   33  docker search ubuntu
+   34  docker pull ubuntu
+   35  docker images
+   36  docker run -it ubuntu
+   37  docker ps
+   38  docker ps -a
+   39  docker ps -l
+   40  docker start 956db2fc0acb
+   41  ls -la
+   42  pwd
+   43  sudo apt update
+   44  wget -O- https://apt.releases.hashicorp.com/gpg |     gpg --dearmor |     sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+   45  wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+   46  echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+   47  sudo apt update && sudo apt install terraform
+   48  terraform -v
+   49  uname -u
+   50  uname
+   51  uname -m
+   52  df -h
+   53  free
+   54  sudo apt install aws-cli
+   55  aws configure
+   56  sudo snap install aws-cli
+   57  sudo apt install awscli
+   58  export AWS_ACCESS_KEY_ID=AKIAYATHZFKX5GT3JGVT
+   59  export AWS_SECRET_ACCESS_KEY=[200~HPTryWrWyi/SV0lSaiU1IsHxyuG0dUHsKuJR0xXF~
+   60  mkdir terraform && cd terraform
+   61  vim main.tf
+   62  sudo apt install vim
+   63  vim main.tf
+   64  terraform init
+   65  git clone https://github.com/hashicorp/learn-terraform-outputs.git
+   66  cd learn-terraform-outputs
+   67  terraform init
+   68  vim terraform.tf
+   69  terraform init
+   70  sudo apt install viber
+   71  sudo apt-get install viber
+   72  sudo apt install ./viber.deb
+   73  https://download.cdn.viber.com/cdn/desktop/Linux/viber.deb
+   74  [200~sudo apt install ./viber.deb~
+   75  sudo apt install ./viber.deb
+   76  history
+   77  cd learn-terraform-outputs
+   78  git clone https://github.com/hashicorp/learn-terraform-outputs.git
+   79  [200~cd learn-terraform-outputs~
+   80  cd learn-terraform-outputs~
+   81  cd learn-terraform-outputs
+   82  terraform init
+   83  vim terraform.tf
+   84  terraform init
+   85  terraform apply
+   86  aws configure
+   87  terraform apply
+   88  ls -la
+   89  vim outputs.tf
+   90  terraform apply
+   91  terraform output
+   92  terraform output lb_url
+   93  terraform output vpc_id
+   94  curl $(terraform output -raw lb_url)
+   95  vim outputs.tf
+   96  terraform apply
+   97  terraform output db_password~
+   98  terraform output db_password
+   99  grep --after-context=10 outputs terraform.tfstate
+  100  terraform output json
+  101  [200~terraform output -json~
+  102  terraform output -json
+  103  terraform destroy
+  104  cd ~
+  105  history > history_outputs.txt
+  106  ls -la
+  107  mv history_outputs.txt Documents
+  108  cd Documents
+  109  ls -la
+  110  cat history_outputs.txt
+  111  git clone https://github.com/hashicorp/learn-terraform-data-sources-vpc.git
+  112  git clone https://github.com/hashicorp/learn-terraform-data-sources-app.git
+  113  [200~cd learn-terraform-data-sources-vpc~
+  114  cd learn-terraform-data-sources-vpc
+  115  ls -la
+  116  vim terraform.tf
+  117  terraform init
+  118  ls -la
+  119  vim main.tf
+  120  vim outputs.tf
+  121  vim variables.tf
+  122  terraform apply -var aws_region=us-west-1
+  123  vim main.tf
+  124  terraform apply -var aws_region=us-west-1
+  125  cd ../learn-terraform-data-sources-app
+  126  ls -la
+  127  vim terraform.tf
+  128  terraform init
+  129  vim main.tf
+  130  ls -la
+  131  vim variables.tf
+  132  vim main.tf
+  133  vim outputs.tf
+  134  terraform apply
+  135  curl $(terraform output -raw lb_url)
+  136  terraform destroy
+  137  cd ../learn-terraform-data-sources-vpc
+  138  terraform destroy -var aws_region=us-west-1
+  139  history > query_data_sources.txt
+  140  mv query_data_sources.txt ../Documents
+  141  cd ~
+  142  cd Documents
+  143  ls -la
+  144  cd ../learn-terraform-data-sources-vpc
+  145  terraform destroy
+  146  cd ~
+  147  sudo apt update
+  148  sudo apt install wget
+  149  wget https://zoom.us/client/latest/zoom_amd64.deb
+  150  sudo apt install ./zoom_amd64.deb
+  151  clear
+  152  git clone https://github.com/hashicorp/learn-terraform-dependencies.git
+  153  cd learn-terraform-dependencies
+  154  ls -la
+  155  vim terraform.tf
+  156  terraform init
+  157  vim main.tf
+  158  clear
+  159  terraform apply
+  160  vim main.tf
+  161  terraform get
+  162  terraform apply
+  163  terraform destroy
+  164  history > history_dependencies.txt
+  165  mv history_dependencies.txt ../Documents
+  166  cd ~
+  167  lastlog
+  168  cd /var/log
+  169  ls -la
+  170  ls -la | less
+  171  clear
+  172  cd ~
+  173  docker --v
+  174  docker --version
+  175  cd Downloads
+  176  ls -la
+  177  rm terragrunt_linux_amd64
+  178  ls -la
+  179  cd ~
+  180  sudo apt update
+  181  sudo snap install terragrunt
+  182  terragrunt --help
+  183  terragrunt --version
+  184  terragrunt --help
+  185  sudo apt-add-repository ppa:ansible/ansible
+  186  sudo apt update
+  187  sudo apt install ansible
+  188  sudo vim /etc/ansible/hosts
+  189  ansible-inventory --list -y
+  190  ps
+  191  ls -la
+  192  sudo apt update
+  193  clear
+  194  sudo apt upgrade
+  195  sudo apt install gimp
+  196  gimp -v
+  197  gimp -version
+  198  docker -version
+  199  sudo docker -version
+  200  shut down
+  201  sudo apt-get update
+  202  sudo apt install virtualbox -y
+  203  sudo apt update
+  204  clear
+  205  sudo apt install vagrant -y
+  206  clear
+  207  vagrant --version
+  208  sudo apt install ncdu
+  209  ncdu -version
+  210  ncdu
+  211  df -h
+  212  free
+  213  sudo ncdu -x/
+  214  sudo ncdu -x /
+  215  sudo apt autoremove
+  216  sudo apt autoclean
+  217  du -sh /var/cache/apt
+  218  sudo apt clean
+  219  du -sh /var/cache/apt
+  220  sudo du -sh
+  221  sudo journalctl --disk-usage
+  222  sudo journalctl --rotate
+  223  sudo journalctl --vacuum-time 1d
+  224  cd /var/lib/snapd/snaps
+  225  ls -la
+  226  cd ~
+  227  vim cleansnap.sh
+  228  chmod a+x cleansnap.sh
+  229  du -sh /var/lib/snapd/snaps
+  230  sudo ./cleansnap.sh
+  231  vim cleansnap.sh
+  232  sudo ./cleansnap.sh
+  233  du -sh /var/lib/snapd/snaps
+  234  sudo ./cleansnap.sh
+  235  du -sh /var/lib/snapd/snaps
+  236  sudo apt autoclean
+  237  sudo apt --fix-broken install
+  238  du -sh /var/cache/apt
+  239  sudo apt clean
+  240  sudo du -sh
+  241  cd /var/cache/apt
+  242  ls -la
+  243  sudo apt autoclean
+  244  sudo du -ah
+  245  cd ~
+  246  sudo du -sh
+  247  free
+  248  df -h
+  249  sudo apt update
+  250  sudo apt install slack
+  251  slack -version
+  252  ls -la
+  253  cd Documents
+  254  ls -la
+  255  vim osobeno-vajni-linkove.odt
+  256  pwd
+  257  ls -la
+  258  clear
+  259  terraform -version
+  260  sudo apt update
+  261  clear
+  262  ls -la
+  263  cd Downloads
+  264  ls -la
+  265  vim Terraform cloud.cer
+  266  sudo apt update
+  267  ls -la
+  268  cat Terraform Cloud.cer
+  269  openssl x509 -noout -text -in Terraform cloud.cer
+  270  sudo apt install chrome
+  271  sudo apt update
+  272  cd Downloads
+  273  ls -la
+  274  sudo dpkg -i google-chrome-stable_current_amd64.deb
+  275  kill 7188
+  276  kill 9 7188
+  277  kill -9 7188
+  278  sudo dpkg -i google-chrome-stable_current_amd64.deb
+  279  ifconfig
+  280  sudo apt install net-tools
+  281  sudo apt update
+  282  sudo apt install net-tools
+  283  sudo apt update
+  284  top
+  285  sudo apt update
+  286  sudo apt install net-tools
+  287  ifconfig
+  288  ipconfig
+  289  iwconfig
+  290  ip
+  291  ip address show
+  292  ip route show
+  293  ip 
+  294  traceroute 0.0.0.0
+  295  sudo apt install inetutils-traceroute
+  296  traceroute 0.0.0.0
+  297  nslookup www.abv.bg
+  298  dig www.abv.bg
+  299  netstat -an
+  300  ss -a
+  301  route
+  302  arp -a
+  303  hostname
+  304  hostname -I
+  305  iptables
+  306  iptables -h
+  307  wget
+  308  wget --help
+  309  curl 
+  310  clear
+  311  ssh
+  312  ssh-keygen -t rsa
+  313  ls -la
+  314  cd .ssh
+  315  ls -la
+  316  vim known_hosts
+  317  cd ~
+  318  cat /var/log/syslog
+  319  jq 
+  320  sudo apt install jq
+  321  cat /var/log/syslog | jq .
+  322  cat /var/log/syslog | jq 
+  323  cat /var/log/syslog jq 
+  324  tail -f /var/log/syslog
+  325  journalctl
+  326  journalctl -xe
+  327  grep "error" /var/log/syslog
+  328  cat /etc/rsyslog.config
+  329  cd /etc
+  330  ls -la
+  331  cat /etc/sysctl.config
+  332  cat sysctl.config
+  333  cd ~
+  334  dmesg
+  335  sudo dmesg
+  336  top
+  337  htop
+  338  sudo snap install htop
+  339  htop
+  340  mpstat
+  341  sudo apt install mpstat
+  342  sudo apt update
+  343  sudo apt install mpstat
+  344  sar
+  345  sudo apt install sysstat
+  346  mpstat
+  347  sar
+  348  free -h
+  349  vmstat 1 5 
+  350  ps aux
+  351  cd /etc
+  352  ls -la
+  353  clear
+  354  df -h
+  355  hwo
+  356  w
+  357  sudo pam_tally2 --user diana
+  358  sudo apt install pam_tally2
+  359  sudo snap install pam_tally2
+  360  sudo apt install libpam_tally2
+  361  sudo apt update
+  362  sudo apt install libpam_tally2
+  363  [200~sudo apt install libpam-tally2
+  364  sudo apt install libpam-tally2
+  365  pam
+  366  pam_tally2
+  367  pam_tally
+  368  sudo apt install libpam_tally2
+  369  exit
+  370  clear
+  371  exit
+  372  clear
+  373  arp
+  374  htop
+  375  tail --help
+  376  exit
+  377  uname -a
+  378  lspci
+  379  lsblk
+  380  clear
+  381  nmcli device show
+  382  ip link show
+  383  sudo ufw status
+  384  vmstat 1
+  385  sar -u 1
+  386  sudo iftop
+  387  sudo apt-get install iftop
+  388  sudo iftop
+  389  sudo apt-get install nload
+  390  sudo nload
+  391  sudo apt update
+  392  sudo apt-get install nload
+  393  sudo nload
+  394  git
+  395  systemctl list-units
+  396  pwd
+  397  ls -la
+  398  cd Documents
+  399  ls -la
+  400  vim Osobeno-vajni-linkove.odt
+  401  cd ~
+  402  hostname
+  403  hostname -I
+  404  ssh
+  405  systemctl status ssh
+  406  netstat -tulpn | grep 22
+  407  ufw
+  408  ufw status
+  409  sudo ufw status
+  410  hostname -I
+  411  wall
+  412  wall --help
+  413  wall
+  414  mesg
+  415  who -T
+  416  write diana tty2
+  417  who -T
+  418  wall hello diana
+  419  whoami
+  420  who -T
+  421  wall
+  422  wall "hello diana"
+  423  who -T
+  424  whoami
+  425  clear
+  426  sudo apt-get remove --purge virtualbox-*
+  427  sudo groupdel vboxusers
+  428  ls /etc/apt/sources.list.d/
+  429  sudo apt-get update
+  430  sudo apt-get uotoremove
+  431  sudo apt-get autoremove
+  432  find osobeno-vajni
+  433  find ./osobeno-vajni
+  434  find / -type f -name "osobeno"
+  435  sudo find / -type f -name "osobeno"
+  436  ls -la
+  437  cd Documents
+  438  ls -la
+  439  vim Osobeno-vajni-linkove.odt
+  440  curl -sfL https://get.k3s.io | sh -
+  441  systemctl k3s status
+  442  firewall-cmd --permanent --add-port=6443/tcp #apiserver
+  443  firewall-cmd --permanent --zone=trusted --add-source=10.42.0.0/16 #pods
+  444  firewall-cmd --permanent --zone=trusted --add-source=10.43.0.0/16 #services
+  445  firewall-cmd --reload
+  446  sudo apt install firewalld
+  447  firewall-cmd --permanent --add-port=6443/tcp #apiserver
+  448  firewall-cmd --permanent --zone=trusted --add-source=10.42.0.0/16 #pods
+  449  firewall-cmd --permanent --zone=trusted --add-source=10.43.0.0/16 #services
+  450  firewall-cmd --reload
+  451  su -
+  452  netstat
+  453  cd ~
+  454  ping 0.0.0.0
+  455  poweroff
+  456  nestat
+  457  ip
+  458  ip -s 192.168.0.1
+  459  ifconfig
+  460  iptraf
+  461  sudo apt install iptraf-ng
+  462  ps
+  463  ps aux
+  464  kill9 2885
+  465  iwconfig
+  466  nmcli
+  467  sudo apt update
+  468  nmcli device
+  469  systemctl docker status
+  470  systemctl status docker
+  471  lshw -C network
+  472  lsusb
+  473  lspci -v
+  474  ufw disable
+  475  sudo ufw disable
+  476  sudo apt update
+  477  ufw status
+  478  sudo ufw status
+  479  sudo ufw enable
+  480  poweroff
+  481  htop
+  482  uname -a
+  483  w
+  484  sudo ufw disable
+  485  sudo reboot
+  486  sudo apt update
+  487  sudo ufw enable
+  488  sudo apt update
+  489  sudo apt upgrade
+  490  uname -r
+  491  make --help
+  492  make --info
+  493  make -info
+  494  make --info
+  495  sudo ufw disable
+  496  sudo apt-get update
+  497  sudo apt-get upgrade
+  498  clear
+  499  lsmod
+  500  modinfo usbhid
+  501  clear
+  502  poweroff
+  503  cat /proc/interruts
+  504  cat /proc/interrupts
+  505  clear
+  506  lsdev
+  507  sudo apt install procinfo
+  508  clear
+  509  lsdev
+  510  clear
+  511  cat /proc/sys/kernel/version
+  512  ethtool
+  513  sudo apt install ethtool
+  514  ethtool
+  515  ethtool -h
+  516  ethtool -a
+  517  ethtool -eth0
+  518  ethtool eth0
+  519  tracepath abv.bg
+  520  clear
+  521  poweroff
+  522  df
+  523  cat /proc/cpuinfo
+  524  clear
+  525  grep -E 'svm|vmx' /proc/cpuinfo
+  526  uname -a
+  527  sudo apt update
+  528  clear
+  529  lscpu
+  530  clear
+  531  kvm-ok
+  532  sudo apt install cpu-checker
+  533  kvm-ok
+  534  du
+  535  clear
+  536  sudo su-
+  537  su-
+  538  sudo -i
+  539  poweroff
+  540  sudo apt update && upgrade
+  541  sudo apt get-upgrade
+  542  sudo apt upgrade
+  543  sudo apt update
+  544  poweroff
+  545  sudo apt update
+  546  virtualbox
+  547  apt list --installed
+  548  clear
+  549  ls -la
+  550  cd VirtualBox VMs
+  551  cd 'VirtualBox VMs'
+  552  ls -la
+  553  rm -r Suse1
+  554  cd ~
+  555  virtualbox --status
+  556  sudo apt update && sudo apt upgrade
+  557  python3 -V
+  558  sudo apt install -y python3-apt
+  559  git clone https://github.com/s-h-3-l-l/katoolin3
+  560  ls -l
+  561  cd katoolin3
+  562  ls -la
+  563  ls -l
+  564  chmod +x ./install.sh
+  565  clear
+  566  sudo ./install.sh
+  567  apt-key list
+  568  sudo passwd root
+  569  su -
+  570  cd ..
+  571  rm -r katoolin3
+  572  ls -la
+  573  git clone https://github.com/s-h-3-l-l/katoolin3
+  574  cd katoolin3
+  575  chmod +x ./install.sh
+  576  sudo ./install.sh
+  577  su -
+  578  ls -la
+  579  vim install.sh
+  580  sudo ./install.sh
+  581  cd
+  582  vim .bashrc
+  583  which python3
+  584  vim .bashrc
+  585  source .bashrc
+  586  clear
+  587  katoolin3
+  588  sudo katoolin3
+  589  apropos partition
+  590  poweroff
+  591  jobs
+  592  fg
+  593  jobs
+  594  clear
+  595  ps -ef
+  596  clear
+  597  sudo katoolin3
+  598  clear
+  599  nc
+  600  nc -nv 192.168.0.100
+  601  nc -nv 192.168.0.100 110
+  602  nc -nv 192.168.0.100 22
+  603  nc -v 192.168.0.100 22
+  604  nc -nvlp 4444
+  605  host -I
+  606  ip address
+  607  ip
+  608  ip -a
+  609  ip address -a
+  610  hostname -I
+  611  nc -help
+  612  nc -e
+  613  clear
+  614  ipconfig
+  615  ifconfig
+  616  clear
+  617  ip adrress show eth0 | grep inet
+  618  ip address show eth0 | grep inet
+  619  nc 192.176.0.100 80
+  620  nc 192.168.0.100 80
+  621  socat
+  622  sudo apt install socat
+  623  clear
+  624  sudo apt update
+  625  clear
+  626  socat -TCP4:192.168.0.100:80
+  627  socat -h
+  628  sudo apt update && sudo apt upgrade
+  629  sudo apt install vlc
+  630  ls -la
+  631  sudo lsusb
+  632  ls /dev/ | grep sd
+  633  sudo fdisk -l
+  634  clear
+  635  minikube status cluster
+  636  minikube start
+  637  minikube get nodes
+  638  kubectl get nodes
+  639  minikube dashboard
+  640  kubectl get pods
+  641  kubectl get namespace
+  642  kubectl --help
+  643  kubectl get cluster
+  644  kubectl get 
+  645  kubectl api-resources
+  646  kubectl get nodes
+  647  minikube start --nodes 2 diana-demo
+  648  minikube stop
+  649  reboot
+  650  sudo apt install helm
+  651  sudo snap install helm
+  652  sudo snap install helm --classic
+  653  helm --v
+  654  helm --version
+  655  helm -v
+  656  helm 
+  657  mkdir k8-project
+  658  cd k8-project
+  659  helm repo add python-app https://mstiesto.github.io/python-hello
+  660  helm repo add python-app-chart https://mostafaalnaggar3.github.io/Helm-Task/
+  661  helm install my-python-app python-app-chart/python-app --version 0.1.0
+  662  minikube start
+  663  helm create k8-diana
+  664  ls -la
+  665  cd k8-diana
+  666  ls -la
+  667  minikube stop
+  668  poweroff
+  669  minikube stop
+  670  helm
+  671  minukube get cluster
+  672  kubectl get cluster
+  673  minikube start
+  674  kubectl get cluster
+  675  minikube dashboard
+  676  kubectl get pods
+  677  kubectl get pod
+  678  kubectl
+  679  kubectl cluster-info
+  680  minikube dashboard
+  681  helm --version
+  682  helm -version
+  683  helm -v
+  684  helm v
+  685  helm version
+  686  kubectl get ns
+  687  helm repo add https://istio-release.storage.googleapis.com/charts
+  688  helm repo add istio https://istio-release.storage.googleapis.com/charts
+  689  helm repo update
+  690  istioctl x precheck
+  691  minikube start --cpus 6 --memory 8192
+  692  minikube start --cpus 2 --memory 8192
+  693  minikube start --cpus 2 --memory 4000
+  694  kubectl get ns
+  695  minikube delete
+  696  kubectl get ns
+  697  minikube start --cpus 2 --memory 4000
+  698  helm repo add istio https://istio-release.storage.googleapis.com/charts
+  699  istioctl x precheck
+  700  ls -la
+  701  cd k8-project
+  702  ls -la
+  703  cd ~
+  704  wich istio
+  705  which istio
+  706  find istio
+  707  helm version
+  708  helm repo add banzaicloud-stable https://kubernetes-charts.banzaicloud.com
+  709  helm install my-istio banzaicloud-stable/istio --version 1.0.5
+  710  clear
+  711  helm repo update
+  712  istioctl x precheck
+  713  uname -a
+  714  mkdir istio-install
+  715  cd istio-install
+  716  cd ~
+  717  mv istio-1.20.2-linux-amd64.tar.gz istio-install
+  718  cd Downloads
+  719  ls -la
+  720  mv istio-1.20.2-linux-amd64.tar.gz ../istio-install
+  721  cd ~
+  722  cd istio-install
+  723  ls -la
+  724  cd ~
+  725  echo $PATH
+  726  cd istio-install
+  727  pwd
+  728  export PATH=$PATH://home/diana/istio-install/bin
+  729  istioctl
+  730  clear
+  731  ls -la
+  732  cd istio-1.20.2-linux-amd64.tar.gz
+  733  tar -xvzf istio-1.20.2-linux-amd64.tar.gz
+  734  istioctl
+  735  echo $PATH
+  736  ls -la
+  737  cd istio-1.20.2
+  738  pwd
+  739  ls -la
+  740  export PATH=$PATH://home/diana/istio-install/istio-1.20.2/bin
+  741  istioctl
+  742  clear
+  743  istioctl x precheck
+  744  cd ../
+  745  helm install --name istio --namespace istio-system banzaicloud-stable/istio
+  746  helm install istio --namespace istio-system banzaicloud-stable/istio
+  747  cd ..
+  748  helm repo update
+  749  helm install istio --namespace istio-system banzaicloud-stable/istio
+  750  istioctl
+  751  clear
+  752  kubectl get pod
+  753  istioctl install
+  754  kubectl get ns
+  755  kubectl get pod
+  756  kubectl get pod -n istio-system
+  757  kubectl -n istio-system get deploy
+  758  kubectl api-versions | grep rbac
+  759  kubectl apply -f install/kubernetes/istio-rbac-beta.yaml
+  760  kubectl delete -f install/kubernetes/istio.yaml
+  761  cd istio-1.20.2
+  762  cd istio-install/istio-1.20.2
+  763  ls -la
+  764  cd tools
+  765  ls -la
+  766  cd ~
+  767  kubectl -n istio-system get deploy
+  768  ls -la
+  769  cd k8-project
+  770  helm repo add python-app-chart https://mostafaalnaggar3.github.io/Helm-Task/
+  771  helm install my-python-app python-app-chart/python-app --version 0.1.0
+  772  ls -la
+  773  minikube dashboard
+  774  minikube addons enable metrics-server
+  775  minikube dashboard
+  776  helm repo add microservices-demo https://github.com/GoogleCloudPlatform/microservices-demo.git
+  777  git clone https://github.com/GoogleCloudPlatform/microservices-demo.git
+  778  ls -la
+  779  cd microservices-demo
+  780  ls -la
+  781  cd releases
+  782  cd release
+  783  ls -la
+  784  vim kubernetes-manifests.yaml
+  785  helm install templates
+  786  helm install microservices-demo/helm-chart
+  787  ls -la
+  788  cp kubernetes-manifests.yaml ~istio-install
+  789  cd ~
+  790  ls -la
+  791  cd istio-install
+  792  ls -la
+  793  cd k8-project
+  794  cd ../k8-project
+  795  ls -la
+  796  cd microservices-demo
+  797  cd release
+  798  vim kubernetes-manifests.yaml
+  799  cd ~
+  800  cd istio-install
+  801  kubectl apply -f kubernetes-manifests.yaml
+  802  ls -la
+  803  cd kubernetes-manifests
+  804  ls -la
+  805  cd ..
+  806  rm -rf kubernetes-manifests
+  807  ls -la
+  808  vim kubernetes-manifests.yaml
+  809  ls -la
+  810  kubectl apply -f kubernetes-manifests.yaml
+  811  kubectl get pod
+  812  kubectl get ns
+  813  kubectl get ns default --show-labels
+  814  kubectl label namespace default istio-injection
+  815  kubectl label namespace default istio-injection=enabled
+  816  kubectl get ns default --show-labels
+  817  kubectl delete -f kubernetes-manifests.yaml
+  818  kubectl apply -f kubernetes-manifests.yaml
+  819  kubectl get pod
+  820  kubectl describe checkoutservice-7644b45df9-qjppk
+  821  kubectl describe checkoutservice-7644b45df9
+  822  kubectl get pod
+  823  minikube stop
+  824  sudo apt update
+  825  minikube stop
+  826  minikube start
+  827  minikube dashboard
+  828  kubectl get pod
+  829  kubectl describe checkoutservice-7644b45df9
+  830  kubectl describe checkoutservice-7644b45df9-qjppk
+  831  kubectl describe "checkoutservice-7644b45df9-qjppk"
+  832  kubeclt get nodes -o wide
+  833  kubectl get nodes -o wide
+  834  kubectl get pods -o wide
+  835  ls -la
+  836  cd istio-install
+  837  ls -la
+  838  kubectl apply -f kubernetes-manifests.yaml
+  839  kubectl get pods
+  840  kubectl get pod
+  841  kubectl get nodes
+  842  kubectl get pods -o wide | grep minikube
+  843  kubectl exec "$SOURCE_POD" -c sleep -- curl -sS -v httpbin:8000/status/418
+  844  kubectl cluster-info
+  845  kubectl config get-contexts
+  846  kubectl create clusterrolebinding cluster-system-anonymous --clusterrole=cluster-admin --user=system:anonymous
+  847  kubectl cluster-info
+  848  minikube stop
+  849  reboot
+  850  sudo apt update
+  851  sudo apt install shutter
+  852  poweroff
+  853  minikube get nodes
+  854  kubectl get nodes
+  855  minukube stop
+  856  minikube stop
+  857  minikube start
+  858  minikube status
+  859  minikube profile list
+  860  minikube delete -p for-demo
+  861  minikube profile list
+  862  ls -la
+  863  cd istio-install
+  864  pwd
+  865  ls -la
+  866  kubectl apply -f istio-1.20.2/samples/addons
+  867  kubectl get pod -n istio-system
+  868  kubectl get -n svc istio-system
+  869  kubectl get svc -n istio-system
+  870  kubectl get svc -n istio-system > istio-svc-ports.txt
+  871  ls -la
+  872  vim istio-svc-ports.txt
+  873  kubectl port-forward svc/kiali -n istio-system 20001
+  874  kubectl get svc -n istio-system
+  875  kubectl port-forward svc/grafana -n istio-system 3000
+  876  kubectl port-forward svc/kiali -n istio-system 20001
+  877  sudo apt update
+  878  minikube stop
+  879  reboot
+  880  journalctl
+  881  clear
+  882  su -
+  883  find /dev/sda2
+  884  cd /dev/sda2
+  885  tree -fiaPhD /dev/sda2
+  886  sudo snap install tree
+  887  tree -fiaPhD /dev/sda2
+  888  cd Downloads
+  889  cd ~
+  890  ls -la
+  891  vim cleansnap.sh
+  892  cd Desktop
+  893  ls -la
+  894  cd 'Old Firefox Data'
+  895  ls -la
+  896  cd 2kfcjcbp.default
+  897  ls -la
+  898  cd ..
+  899  rm -rf 'Old Firefox Data'
+  900  sudo apt update
+  901  cd ~
+  902  sudo fsck /dev/sda2
+  903  sudo apt-get install smartmontools
+  904  sudo smartctl -a /dev/sdX
+  905  sudo smartctl -a /dev/sda2
+  906  clear
+  907  dmesg
+  908  sudo dmesg
+  909  find forcedeth.c
+  910  which forcedeth.c
+  911  clear
+  912  sudo apt update
+  913  sudo apt install etcher
+  914  clear
+  915  cd Downloads
+  916  ls -la
+  917  df
+  918  sudo dd if=MX-23.2_x64.iso of=/dev/sdd1 bs=1M status=progress
+  919  clear
+  920  reboot
+  921  cd Downloads
+  922  ls -la
+  923  ./balenaEtcher-1.18.11-x64.AppImage
+  924  ls -la
+  925  sudo dpkg -c
+  926  sudo dpkg -i balena-etcher_1.19.4_amd64.deb 
+  927  reboot
+  928  minikube start
+  929  kubectl nodes show
+  930  kubectl get svc -n istio-system
+  931  ls -la
+  932  cd k8-project
+  933  ls -la
+  934  kubectl get svc -n istio-system > istio-svc.txt
+  935  ls -la
+  936  vim istio-svc.txt
+  937  minikube dashboard
+  938  sudo apt update
+  939  minikube status
+  940  minikube describe
+  941  kubectl describe
+  942  history 
+  943  history > commands.txt
