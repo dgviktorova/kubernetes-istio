@@ -29,7 +29,15 @@ OS - Ubuntu 22.04
     $ helm version - to check if the CLI tool is installed
     
 ### Installing Istio MESH
-    $
+    $ curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.20.2 TARGET_ARCH=x86_64 sh -
+    $ mkdir istio-install
+    $ cd Downloads
+    $ mv istio-1.20.2-linux-amd64.tar.gz ../istio-install
+    $ cd istio-install
+    $ tar istio-1.20.2-linux-amd64.tar.gz
+    
+    In order for istioctl tool to work properly we need to move the PATH to the binary folder of istio installation
+    $ 
 
    
     
