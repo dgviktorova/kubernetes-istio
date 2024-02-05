@@ -14,13 +14,22 @@ OS - Ubuntu 22.04
 - Installing testing microservise python app via Helm.
   
 ## Building the installation:
-### Installing and setting up Minikube cluster localy;
+
+### Installing and setting up Minikube cluster localy
     Installing Minikube:
     $ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
     sudo install minikube-linux-amd64 /usr/local/bin/minikube
     $ sudo install minikube-linux-amd64 /usr/local/bin/minikube
     $ minikube start --nodes 1 diana-demo - these steps create one cluster with default namespace
     $ kubectl cluster-info - checking that the cluster is up and running
+
+### Installing Helm localy
+    $ sudo apt update
+    $ sudo snap install helm --classic
+    $ helm version - to check if the CLI tool is installed
+    
+### Installing Istio MESH
+    $
 
    
     
